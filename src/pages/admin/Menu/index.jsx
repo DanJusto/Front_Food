@@ -52,7 +52,7 @@ export function Menu() {
           onChange={e => setSearch(e.target.value)}  
         />
         {search !== "" ?
-          <div>
+          <div className="itens">
             <SectionAdmin title="Refeições" products={refeicoes}/>
             <SectionAdmin title="Sobremesas" products={sobremesas}/>
             <SectionAdmin title="Bebidas" products={bebidas}/>

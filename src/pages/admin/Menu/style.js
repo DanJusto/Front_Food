@@ -20,4 +20,8 @@ export const Content = styled.div`
     padding: 1rem;
     border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK_1000};
   }
+
+  .itens div {
+    margin-bottom: 0.5rem;
+  }
 `;
