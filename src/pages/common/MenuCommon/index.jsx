@@ -48,13 +48,14 @@ export function MenuCommon() {
           placeholder="Busque por pratos ou ingredientes"
           onChange={e => setSearch(e.target.value)}  
         />
-          {search !== "" ?
-          <div>
+        {search !== "" ?
+          <div className="itens">
             <SectionCommon title="Refeições" products={refeicoes}/>
             <SectionCommon title="Sobremesas" products={sobremesas}/>
             <SectionCommon title="Bebidas" products={bebidas}/>
           </div>
-           : <div/>}
+          : <div/>
+        }
         <TextButton title="Sair" onClick={handleSignOut} />
       </Content>
       <Footer />

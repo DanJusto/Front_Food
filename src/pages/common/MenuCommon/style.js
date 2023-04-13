@@ -25,4 +25,8 @@ export const Content = styled.div`
       outline: none;
     }
   }
+
+  .itens div {
+    margin-bottom: 0.5rem;
+  }
 `;
