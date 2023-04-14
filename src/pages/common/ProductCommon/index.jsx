@@ -1,4 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { api } from "../../../services/api";
 import { Container, Content } from "./style";
 import { HeaderCommon } from "../../../components/Header/HeaderCommon";
 import { Footer } from "../../../components/Footer";
@@ -11,12 +13,32 @@ import { Stepper } from "../../../components/Stepper";
 import saladaravanello from "../../../assets/saladaravanello.png"
 
 export function ProductCommon() {
+  const [product, setProduct] = useState([]);
+  const [tags, setTags] = useState([]);
 
+  const imageUrl = `${api.defaults.baseURL}/files/${product.image}`
+
+  const params = useParams();
   const navigate = useNavigate();
+  let productTags = [];
+  if (tags) {
+    tags.map(tag => {
+      productTags.push(tag.tag_name)
+    })
+  }
 
   function backToHomeOrMenu() {
     navigate(-1);
   }
+
+  useEffect(() => {
+    async function fetchProduct() {
+      const response = await api.get(`/products/${params.id}`);
+      setProduct(response.data);
+      setTags(response.data.tags);
+    };
+    fetchProduct();
+  }, []);
 
   return (
     <Container>
@@ -24,21 +46,26 @@ export function ProductCommon() {
       <main>
         <TextButton icon={CareLeft} title="voltar" onClick={backToHomeOrMenu} />
         <Content>
-          <img src={saladaravanello} alt="foto da refeição" />
+          <img src={imageUrl} alt="foto da refeição" />
           <div>
-            <h2>Salada Ravanello</h2>
-            <p>Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.</p>
-            <div className="tags">
-              <Tag title="alface" />
-              <Tag title="pão naan" />
-              <Tag title="cebola" />
-              <Tag title="rabanete" />
-              <Tag title="pepino" />
-              <Tag title="tomate" />
-            </div>
+            <h2>{product.title}</h2>
+            <p>{product.description}</p>
+            {
+              tags &&
+              <div className="tags">
+              {
+                productTags.map((tag, index) => (
+                  <Tag 
+                    key={index}
+                    title={tag}
+                  />
+                ))
+              }
+              </div>
+            }
             <div className="pedido">
               <Stepper />
-              <Button id="button-pedir" icon={Receipt} title="pedir ∙ R$ 25,00"/>
+              <Button id="button-pedir" icon={Receipt} title={`pedir ∙ ${product.price}`}/>
             </div>
           </div>
         </Content>
