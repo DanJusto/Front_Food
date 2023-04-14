@@ -10,14 +10,13 @@ import { CareLeft } from "../../../components/Icons/CareLeft";
 import { Receipt } from "../../../components/Icons/Receipt";
 import { Tag } from "../../../components/Tag";
 import { Stepper } from "../../../components/Stepper";
-import saladaravanello from "../../../assets/saladaravanello.png"
 
 export function ProductCommon() {
   const [product, setProduct] = useState([]);
   const [tags, setTags] = useState([]);
 
   const imageUrl = `${api.defaults.baseURL}/files/${product.image}`
-
+  
   const params = useParams();
   const navigate = useNavigate();
   let productTags = [];

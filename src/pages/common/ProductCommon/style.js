@@ -115,14 +115,9 @@ export const Content = styled.div`
       }
 
       p {
-        font-size: 0;
         text-align: start;
-      }
-
-      p::after {
         font-size: 2.4rem;
         line-height: 140%;
-        content: "Rabanetes, folhas verdes e molho agridoce salpicados com gergelim. O pão naan dá um toque especial.";
       }
 
       .tags {
