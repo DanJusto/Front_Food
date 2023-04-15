@@ -2,13 +2,13 @@
 Website de um cardápio digital para um restaurante fictício.
 
 ## 📜 Sumário
-1. [Detalhes do projeto](https://github.com/DanJusto/Project_FoodExplorer#1--detalhes-do-projeto)
-2. [Tecnologias usadas](https://github.com/DanJusto/Project_FoodExplorer#2--tecnologias-usadas)
-3. [Visual](https://github.com/DanJusto/Project_FoodExplorer#3--visual)
-4. [Para rodar o projeto](https://github.com/DanJusto/Project_FoodExplorer#4--para-rodar-o-projeto-em-ambiente-de-desenvolvimento)
-5. [Link](https://github.com/DanJusto/Project_FoodExplorer#5--link)
-6. [Colaboradores](https://github.com/DanJusto/Project_FoodExplorer#6--colaboradores)
-7. [Autor](https://github.com/DanJusto/Project_FoodExplorer#7--autor)
+1. [Detalhes do projeto](https://github.com/DanJusto/Front_Food#1--detalhes-do-projeto)
+2. [Tecnologias usadas](https://github.com/DanJusto/Front_Food#2--tecnologias-usadas)
+3. [Visual](https://github.com/DanJusto/Front_Food#3--visual)
+4. [Para rodar o projeto](https://github.com/DanJusto/Front_Food#4--para-rodar-o-projeto-em-ambiente-de-desenvolvimento)
+5. [Link](https://github.com/DanJusto/Front_Food#5--link)
+6. [Colaboradores](https://github.com/DanJusto/Front_Food#6--colaboradores)
+7. [Autor](https://github.com/DanJusto/Front_Food#7--autor)
 
 ## 1. 🔍 Detalhes do projeto
 O food explorer é um website de um cardápio digital para um restaurante fictício, para fins acadêmicos. O admin pode cadastrar, editar e deletar produtos diretamente na interface web, além de também poder visualizar todos os produtos ou algum específico, o que também pode ser feito pelo usuário comum (apenas a visualização).
